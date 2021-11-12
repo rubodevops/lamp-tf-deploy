@@ -36,7 +36,7 @@ resource "aws_instance" "lamp-master" {
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.lamp-sg.id]
   subnet_id                   = aws_subnet.subnet_1.id
-  user_data                   = file("install-lamp.sh")
+  user_data                   = file("install-lamp-ubuntu.sh")
 
   tags = {
     Name = "lamp_master_tf"
